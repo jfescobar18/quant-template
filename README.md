@@ -1,100 +1,82 @@
-<p align="center">
-  <a href="https://www.chromatic.com/">
-    <img alt="Chromatic" src="https://avatars2.githubusercontent.com/u/24584319?s=200&v=4" width="60" />
-  </a>
-</p>
+# Intro Storybook Vue Template
 
-<h1 align="center">
-  Chromatic's Intro to Storybook Vue template
-</h1>
+This is a starter template to get up and running quickly with Vue and Storybook.
 
-This template ships with the main Vue and Storybook configuration files you'll need to get up and running fast.
+## Installation
 
-## 🚅 Quick start
+Ensure you have [Yarn](https://yarnpkg.com/) installed before proceeding.
 
-1.  **Create the application.**
+1. Clone the repository:
 
-    Use [degit](https://github.com/Rich-Harris/degit) to get this template.
+   ```sh
+   git clone https://github.com/jfescobar18/quant-template.git
+   cd quant-template
+   ```
 
-    ```shell
-    # Clone the template
-    npx degit chromaui/intro-storybook-vue-template taskbox
-    ```
+2. Install dependencies:
 
-1.  **Install the dependencies.**
+   ```sh
+   yarn install
+   ```
 
-    Navigate into your new site’s directory and install the necessary dependencies.
+## Running Storybook
 
-    ```shell
-    # Navigate to the directory
-    cd taskbox/
+To start Storybook, run:
 
-    # Install the dependencies
-    yarn
-    ```
+```sh
+yarn storybook
+```
 
-1.  **Open the source code and start editing!**
+This will launch Storybook on port `6006`.
+Or press o + enter in terminal to open your browser
 
-    Open the `taskbox` directory in your code editor of choice and building your first component!
+## Additional Scripts
 
-1.  **Browse your stories!**
+- **Format Code:**
 
-    Run `yarn storybook` to see your component's stories at `http://localhost:6006`
+  ```sh
+  yarn format
+  ```
 
-## 🔎 What's inside?
+  Formats the code using Prettier.
 
-A quick look at the top-level files and directories included with this template.
+- **Build Storybook:**
 
-    .
-    ├── .storybook
-    ├── node_modules
-    ├── public
-    ├── src
-    ├── .gitignore
-    ├── .eslintrc.cjs
-    ├── .prettierrc.json
-    ├── index.html
-    |── jsconfig.json
-    ├── LICENSE
-    ├── yarn.lock
-    ├── package.json
-    ├── vite.config.js
-    └── README.md
+  ```sh
+  yarn build-storybook
+  ```
 
-1.  **`.storybook`**: This directory contains Storybook's [configuration](https://storybook.js.org/docs/react/configure/overview) files.
+  Builds Storybook as static files.
 
-2.  **`node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages).
+## Code Formatting with Prettier
 
-3.  **`public`**: This directory will contain the development and production build of the site.
+This project uses [Prettier](https://prettier.io/) for code formatting. The formatting style is configured to use 2 spaces for indentation.
 
-4.  **`src`**: This directory will contain all of the code related to what you will see on your application.
+### Setting Up Prettier
 
-5.  **`.gitignore`**: This file tells git which files it should not track or maintain during the development process of your project.
+To ensure consistent formatting, make sure you have a `.prettierrc` file in the root of your project with the following content:
 
-6.  **`.eslintrc.cjs`**: This file contains the configuration for ESLint.
+```json
+{
+  "tabWidth": 2,
+  "useTabs": false,
+  "semi": true,
+  "singleQuote": true,
+  "trailingComma": "es5"
+}
+```
 
-7.  **`.prettierrc.json`**: This file contains the configuration for Prettier.
+You can also format your code manually by running:
 
-8.  **`.index.html`**: This is the HTML page that is served when generating a development or production build.
+```sh
+yarn format
+```
 
-9.  **`jsconfig.json`**: This file specifies the root files and the options for the features provided by the JavaScript language service.
+## References
 
-10. **`LICENSE`**: The template is licensed under the MIT licence.
+- [Storybook Documentation](https://storybook.js.org/docs/vue/get-started/introduction)
+- [Vite Documentation](https://vitejs.dev/)
+- [Vue 3 Documentation](https://vuejs.org/)
+- [Chromatic](https://www.chromatic.com/)
+- [Prettier Documentation](https://prettier.io/docs/en/index.html)
 
-11. **`yarn.lock`**: This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(Do not change it manually).**
-
-12. **`package.json`**: Standard manifest file for Node.js projects, which typically includes project specific metadata (such as the project's name, the author among other information). It's based on this file that npm will know which packages are necessary to the project.
-
-13. **`vite.config.js`**: This is the configuration file for [Vite](https://vitejs.dev/), a build tool that aims to provide a faster and leaner development experience for modern web projects.
-
-14. **`README.md`**: A text file containing useful reference information about the project.
-
-## Contribute
-
-If you encounter an issue with the template, we encourage you to open an issue in this template's repository.
-
-## Learning Storybook
-
-1. Read our introductory tutorial at [Learn Storybook](https://storybook.js.org/tutorials/intro-to-storybook/vue/en/get-started/).
-2. Learn how to transform your component libraries into design systems in our [Design Systems for Developers](https://storybook.js.org/tutorials/design-systems-for-developers/) tutorial.
-3. See our official documentation at [Storybook](https://storybook.js.org/).
