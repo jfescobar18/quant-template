@@ -4,10 +4,7 @@
         <div class="w-full flex flex-wrap items-center justify-between">
             <div class="flex flex-wrap gap-6">
                 <span class="text-primary-900 text-lg font-semibold">{{ data.title }}</span>
-                <Badge :class="['flex flex-wrap items-center font-medium text-xs px-1.5 py-0.5 rounded-md' , data.period.toLowerCase() === 'live' ? 'text-utility-success-700 border-utility-success-200 bg-utility-success-50' : 'text-utility-gray-700 border-utility-gray-200 bg-utility-gray-50']">
-                    <span :class="['h-2 w-2 rounded-full text-test' , data.period.toLowerCase() === 'live' ? 'bg-utility-success-500' : 'bg-utility-gray-500' ]"></span>
-                    {{data.period}}
-                </Badge>
+                <PeriodBadge :label="data.period"/>
             </div>
             <div>
                 <Select>
@@ -42,13 +39,14 @@
 
 <script setup>
     import { ref } from 'vue';
-    import Badge from '../components/ui/badge/Badge.vue'
+    
     import Select from '../components/ui/select/Select.vue';
     import SelectTrigger from '../components/ui/select/SelectTrigger.vue';
     import SelectValue from '../components/ui/select/SelectValue.vue';
     import SelectContent from '../components/ui/select/SelectContent.vue';
     import SelectGroup from '../components/ui/select/SelectGroup.vue';
     import SelectItem from '../components/ui/select/SelectItem.vue';
+import PeriodBadge from '@/components/common/PeriodBadge.vue';
 
 
     const data = ref({
