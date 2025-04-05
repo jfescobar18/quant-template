@@ -2,7 +2,25 @@
 
 @custom-variant dark (&:is(.dark *));
 
-* {
+@theme{
+  --color-avocado-100: oklch(0.58 0.2023 141.88);
+  --color-main-bg : oklch(0.24 0.0116 277.99);
+  --color-primary-900 : oklch(0.98 0 0);
+  --color-utility-gray-50 : oklch(0.2 0.0111 260.66);
+  --color-utility-gray-200 : oklch(0.35 0.0128 267.17);
+  --color-utility-gray-500 : oklch(0.63 0.0096 264.5);
+  --color-utility-gray-700 : oklch(0.85 0.0043 271.36);
+  --color-utility-success-50 : oklch(0.29 0.0586 161.78);
+  --color-utility-success-200 : oklch(0.42 0.0945 158.65);
+  --color-utility-success-500 : oklch(0.67 0.1596 155.59);
+  --color-utility-success-700 : oklch(0.83 0.1293 158.51);
+  --color-fg-secondary-700 : oklch(0.85 0.0043 271.36);
+  --color-bg-quaternary : oklch(0.35 0.0128 267.17);
+  --color-text-tertiary-600: oklch(0.68 0.0081 260.73);
+
+}
+
+/* * {
   box-sizing: border-box;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-tap-highlight-color: transparent;
@@ -579,4 +597,4 @@ textarea {
   body {
     @apply bg-background text-foreground;
   }
-}
+} */
