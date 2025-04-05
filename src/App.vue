@@ -1,9 +1,10 @@
 <script setup>
-  import ChartContainer from './layouts/ChartContainer.vue'
+  import NPSByAgent from './components/NPSByAgent.vue';
+
 </script>
 
 <template>
-  <ChartContainer/>
+  <NPSByAgent/>
 </template>
 
 <style scoped>

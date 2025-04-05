@@ -12,11 +12,15 @@
   --color-utility-gray-700 : oklch(0.85 0.0043 271.36);
   --color-utility-success-50 : oklch(0.29 0.0586 161.78);
   --color-utility-success-200 : oklch(0.42 0.0945 158.65);
+  --color-utility-success-400 : oklch(0.59 0.1429 155.15);
   --color-utility-success-500 : oklch(0.67 0.1596 155.59);
   --color-utility-success-700 : oklch(0.83 0.1293 158.51);
+  --color-utility-warning-600 : oklch(0.81 0.1634 75.65);
+  --color-utility-error-500 : oklch(0.64 0.2104 28.54);
   --color-fg-secondary-700 : oklch(0.85 0.0043 271.36);
   --color-bg-quaternary : oklch(0.35 0.0128 267.17);
-  --color-text-tertiary-600: oklch(0.68 0.0081 260.73);
+  --color-text-tertiary-600 : oklch(0.68 0.0081 260.73);
+  --color-border-secondary : oklch(0.27 0.0178 266.3);
 }
 
 /* * {

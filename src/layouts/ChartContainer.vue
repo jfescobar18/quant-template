@@ -3,14 +3,14 @@
         <!-- Text, badge and select -->
         <div class="w-full flex flex-wrap items-center justify-between">
             <div class="flex flex-wrap gap-6">
-                <span class="text-primary-900 text-lg font-semibold">{{ data.title }}</span>
-                <PeriodBadge :label="data.period"/>
+                <span class="text-primary-900 text-lg font-semibold">{{ props.data.title }}</span>
+                <PeriodBadge :label="props.data.period"/>
             </div>
             <div>
                 <Select>
-                    <SelectTrigger class="bg-bg-quaternary border-none rounded-md px-3"><SelectValue class="text-fg-secondary-700 font-normal text-xs" :placeholder="data.title"></SelectValue></SelectTrigger>
+                    <SelectTrigger class="bg-bg-quaternary border-none rounded-md px-3"><SelectValue class="text-fg-secondary-700 font-normal text-xs" :placeholder="props.data.title"></SelectValue></SelectTrigger>
                     <SelectContent class="bg-white"><SelectGroup>
-                        <SelectItem v-for="filter in data.filters" :value="filter">{{ filter }}</SelectItem>
+                        <SelectItem v-for="filter in props.data.filters" :value="filter">{{ filter }}</SelectItem>
                     </SelectGroup></SelectContent>
                 </Select>
             </div>
@@ -19,18 +19,18 @@
         <!-- metrics and keys -->
         <div class="w-full flex flex-wrap items-center justify-between">
             <div class="flex flex-wrap items-center gap-2.5 text-primary-900">
-                <span class="font-semibold text-3xl">{{ data.metric }}</span>
-                <span class="font-normal text-sm">{{ data.metricLabel }}</span>
+                <span class="font-semibold text-3xl">{{ props.data.metric }}</span>
+                <span class="font-normal text-sm">{{ props.data.metricLabel }}</span>
             </div>
             <div class="flex flex-wrap items-end justify-end gap-3 h-full ">
-                <div v-for="element in data.keys" class="flex flex-wrap items-center gap-2">
+                <div v-for="element in props.data.keys" class="flex flex-wrap items-center gap-2">
                     <span class="h-2 w-2 rounded-full text-test" :style="{backgroundColor:element.keyColor}"></span>
                     <span class="text-sm text-text-tertiary-600">{{ element.keyName }}</span>
                 </div>
             </div>
         </div>
 
-        <div class="bg-[#FF6C6C] w-full h-full overflow-auto grow-0">
+        <div class="w-full h-full overflow-auto grow-0">
             <slot />
         </div>
     </div>
@@ -38,29 +38,21 @@
 
 
 <script setup>
-    import { ref } from 'vue';
-    
+    import { ref  } from 'vue';
     import Select from '../components/ui/select/Select.vue';
     import SelectTrigger from '../components/ui/select/SelectTrigger.vue';
     import SelectValue from '../components/ui/select/SelectValue.vue';
     import SelectContent from '../components/ui/select/SelectContent.vue';
     import SelectGroup from '../components/ui/select/SelectGroup.vue';
     import SelectItem from '../components/ui/select/SelectItem.vue';
-import PeriodBadge from '@/components/common/PeriodBadge.vue';
+    import PeriodBadge from '@/components/common/PeriodBadge.vue';
 
 
-    const data = ref({
-        title : "NPS by Agent",
-        period : "Last 7 Days",
-        metric : 752,
-        metricLabel : "AverageNPS",
-        keys:[
-            {keyName : "Total Volume", keyColor : "#A4A7AE"},
-            {keyName : "Positive NPS", keyColor : "#17B26A"},
-            {keyName : "Negative NPS", keyColor : "#F04438"},
-        ],
-        chart : {},
-        filters : [],
+    const props = defineProps({
+        data:{
+            type: Object,
+            required:true
+        }
     })
 
 </script>
