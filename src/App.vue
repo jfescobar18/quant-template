@@ -1,10 +1,10 @@
 <script setup>
-  import NPSByAgent from './components/NPSByAgent.vue';
+  import VolumeByAgent from './components/VolumeByAgent.vue';
 
 </script>
 
 <template>
-  <NPSByAgent/>
+  <VolumeByAgent/>
 </template>
 
 <style scoped>
