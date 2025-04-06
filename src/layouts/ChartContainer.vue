@@ -7,7 +7,7 @@
                 <PeriodBadge :label="props.data.period"/>
             </div>
             <div>
-                <Select>
+                <Select v-if="data.filters">
                     <SelectTrigger class="bg-bg-quaternary border-none rounded-md px-3"><SelectValue class="text-fg-secondary-700 font-normal text-xs" :placeholder="props.data.title"></SelectValue></SelectTrigger>
                     <SelectContent v-if="data.filters && data.filters.length>0" class="bg-white"><SelectGroup>
                         <SelectItem v-for="filter in props.data.filters" :value="filter">{{ filter }}</SelectItem>
@@ -19,10 +19,10 @@
         <!-- metrics and keys -->
         <div class="w-full flex flex-wrap items-center justify-between">
             <div class="flex flex-wrap items-center gap-2.5 text-primary-900">
-                <span class="font-semibold text-3xl">{{ props.data.metric }}</span>
-                <span class="font-normal text-sm">{{ props.data.metricLabel }}</span>
+                <span v-if="props.data.metric" class="font-semibold text-3xl">{{ props.data.metric }}</span>
+                <span v-if="props.data.metricLabel" class="font-normal text-sm">{{ props.data.metricLabel }}</span>
             </div>
-            <div class="flex flex-wrap items-end justify-end gap-3 h-full ">
+            <div class="flex flex-wrap items-end justify-end gap-3 h-full" v-if="props.data.keys">
                 <div v-for="(element , index) in props.data.keys" class="flex flex-wrap items-center gap-2">
                     <span class="rounded-full text-test" :class="props.data.title.toLowerCase() !== 'volume by agent' ? 'h-2 w-2' : index === 2 ? 'w-2 h-2' : index === 3 ? 'w-[14px] h-[14px]' : index === 4 ? 'w-6 h-6' : 'w-1 h-1'" :style="{backgroundColor:element.keyColor}"></span>
                     <span class="text-sm text-text-tertiary-600">{{ element.keyName }}</span>

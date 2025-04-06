@@ -1,10 +1,10 @@
 <script setup>
-  import VolumeByAgent from './components/VolumeByAgent.vue';
+  import LiveAgentsList from './components/LiveAgentsList.vue';
 
 </script>
 
 <template>
-  <VolumeByAgent/>
+  <LiveAgentsList/>
 </template>
 
 <style scoped>

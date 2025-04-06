@@ -23,7 +23,7 @@
 <script setup>
     import ChartContainer from '@/layouts/ChartContainer.vue';
     import { ref , onMounted } from 'vue';
-import Badge from './ui/badge/Badge.vue';
+    import Badge from './ui/badge/Badge.vue';
 
     const selectedDates = ref([]);
 
