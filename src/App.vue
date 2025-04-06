@@ -1,10 +1,9 @@
 <script setup>
-  import LiveAgentsList from './components/LiveAgentsList.vue';
-
+  import VolumeAndNPS from './components/VolumeAndNPS.vue';
 </script>
 
 <template>
-  <LiveAgentsList/>
+  <VolumeAndNPS/>
 </template>
 
 <style scoped>
