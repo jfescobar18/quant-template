@@ -6,7 +6,6 @@
             index="name" 
             :show-grid-line="false" 
             :colors="['#949494','#019B0F','#F43131']"
-            :show-x-axis="false"
             :show-legend="false"
         />
     </ChartContainer>
@@ -16,8 +15,7 @@
     import { ref } from 'vue';
     import ChartContainer from '@/layouts/ChartContainer.vue';
     import AreaChart from './ui/chart-area/AreaChart.vue';
-import { color } from 'storybook/internal/theming';
-
+    
     const data = ref({
         title : "Volume + NPS",
         period : "Last 30 Days",
