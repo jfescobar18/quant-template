@@ -146,7 +146,7 @@ function handleLegendItemClick(d, i) {
         :tick-format="xFormatter ?? ((v) => data[v]?.[index])"
         :grid-line="false"
         :tick-line="false"
-        tick-text-color="hsl(var(--vis-text-color))"
+        tick-text-color="#94979C"
       />
       <VisAxis
         v-if="showYAxis"
@@ -160,7 +160,7 @@ function handleLegendItemClick(d, i) {
             class: 'text-muted',
           },
         }"
-        tick-text-color="hsl(var(--vis-text-color))"
+        tick-text-color="#94979C"
       />
 
       <slot />
