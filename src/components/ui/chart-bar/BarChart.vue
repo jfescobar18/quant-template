@@ -112,8 +112,9 @@ const selectorsBar = computed(() =>
         :tick-format="xFormatter ?? ((v) => data[v]?.[index])"
         :grid-line="false"
         :tick-line="false"
-        tick-text-color="hsl(var(--vis-text-color))"
-      />
+        tick-text-color="#F7F7F7"
+        />
+
       <VisAxis
         v-if="showYAxis"
         type="y"
@@ -126,7 +127,7 @@ const selectorsBar = computed(() =>
             class: 'text-muted',
           },
         }"
-        tick-text-color="hsl(var(--vis-text-color))"
+        tick-text-color="#94979C"
       />
 
       <slot />

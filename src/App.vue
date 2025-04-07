@@ -1,9 +1,9 @@
 <script setup>
-  import VolumeAndNPS from './components/VolumeAndNPS.vue';
+  import AHTByAgent from './components/AHTByAgent.vue';
 </script>
 
 <template>
-  <VolumeAndNPS/>
+  <AHTByAgent/>
 </template>
 
 <style scoped>
