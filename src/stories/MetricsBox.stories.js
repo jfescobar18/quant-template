@@ -1,4 +1,4 @@
-import MetricsBox from './MetricsBox.vue'
+import MetricsBox from '@/layouts/MetricsBox.vue'
 
 export default {
   title: 'Example/MetricsBox',
