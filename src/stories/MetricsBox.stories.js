@@ -35,8 +35,8 @@ export const Default = () => {
   }
 }
 
-export const OneElement = Template.bind({})
-OneElement.args = {
+export const OneElementInactive = Template.bind({})
+OneElementInactive.args = {
   data: {
     title: 'NPS by Agent',
     period: 'Last 7 Days',
@@ -44,8 +44,8 @@ OneElement.args = {
   }
 }
 
-export const TwoElements = Template.bind({})
-TwoElements.args = {
+export const TwoElementsInactive = Template.bind({})
+TwoElementsInactive.args = {
   data: {
     title: 'NPS by Agent',
     period: 'Last 7 Days',
@@ -56,8 +56,8 @@ TwoElements.args = {
   }
 }
 
-export const ThreeElements = Template.bind({})
-ThreeElements.args = {
+export const ThreeElementsInactive = Template.bind({})
+ThreeElementsInactive.args = {
   data: {
     title: 'NPS by Agent',
     period: 'Last 7 Days',
@@ -69,11 +69,11 @@ ThreeElements.args = {
   }
 }
 
-export const FourElements = Template.bind({})
-FourElements.args = {
+export const FourElementsActive = Template.bind({})
+FourElementsActive.args = {
   data: {
     title: 'NPS by Agent',
-    period: 'Last 7 Days',
+    period: 'Live',
     items: [
       { name: 'Total', metric: '840' },
       { name: 'AHT', metric: '2.8m' },
