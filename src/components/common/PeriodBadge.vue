@@ -1,28 +1,38 @@
 <template>
-  <Badge
-    :class="[
-      'flex flex-wrap items-center font-medium text-xs px-1.5 py-0.5 rounded-md',
-      label.toLowerCase() === 'live'
-        ? 'text-utility-success-700 border-utility-success-200 bg-utility-success-50'
-        : 'text-utility-gray-700 border-utility-gray-200 bg-utility-gray-50'
-    ]"
+  <span
+    class="flex items-center w-fit gap-1.5 ml-[8px] h-[22px] px-[6px] text-[12px] rounded"
+    :class="statusClasses"
   >
     <span
-      :class="[
-        'h-2 w-2 rounded-full text-test',
-        label.toLowerCase() === 'live' ? 'bg-utility-success-500' : 'bg-utility-gray-500'
-      ]"
+      class="inline-block rounded-full w-2 h-2"
+      :style="{ backgroundColor: isActive ? '#17B26A' : '#85888E' }"
     ></span>
-    {{ label }}
-  </Badge>
+    <span :style="{ color: isActive ? '#75E0A7' : '#CECFD2' }">
+      {{ label }}
+    </span>
+  </span>
 </template>
 
 <script setup>
-import Badge from '../ui/badge/Badge.vue'
+import { computed } from 'vue'
 
 const props = defineProps({
-  label: String
+  label: {
+    type: String,
+    required: true
+  },
+  isActive: {
+    type: Boolean,
+    default: false
+  }
+})
+
+const { label, isActive } = props
+
+const statusClasses = computed(() => {
+  return {
+    'bg-[#053321] border border-[#085D3A]': isActive,
+    'bg-[#13161B] border border-[#373A41]': !isActive
+  }
 })
 </script>
-
-<style lang="scss" scoped></style>
