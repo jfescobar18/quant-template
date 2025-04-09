@@ -15,6 +15,17 @@ const Template = (args) => ({
   template: '<MetricsBox v-bind="args" />'
 })
 
+const MultipleTemplate = (args) => ({
+  components: { MetricsBox },
+  setup() {
+    return { args }
+  },
+  template: `<div>
+              <MetricsBox :data="args.data1" />
+              <MetricsBox :data="args.data2" />
+            </div>`
+})
+
 export const Default = () => {
   const data = ref(null)
 
@@ -79,6 +90,28 @@ FourElementsActive.args = {
       { name: 'AHT', metric: '2.8m' },
       { name: 'ASAI', metric: '0.2s' },
       { name: 'NPS', metric: '752' }
+    ]
+  }
+}
+
+export const MultipleMetricsBoxes = MultipleTemplate.bind({})
+MultipleMetricsBoxes.args = {
+  data1: {
+    title: 'NPS by Agent',
+    period: 'Last 7 Days',
+    items: [
+      { name: 'Total', metric: '840' },
+      { name: 'AHT', metric: '2.8m' },
+      { name: 'ASAI', metric: '0.2s' },
+      { name: 'NPS', metric: '752' }
+    ]
+  },
+  data2: {
+    title: 'NPS by Agent',
+    period: 'Last 7 Days',
+    items: [
+      { name: 'Total', metric: '840' },
+      { name: 'AHT', metric: '2.8m' }
     ]
   }
 }
